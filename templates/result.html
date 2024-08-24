@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="static/EMA.png">
+</head>
+<body>
+    <div class="container">
+        <h1 class="result-main-header">Emergency Medication Assistance</h1>
+        <div class="result">
+            {% if data %}
+            <div class="result-header">
+                <h2><i>{{ data['name'] }}</i></h2>
+            </div>
+            <div class="result-details">
+                <div class="result-box">
+                    <p class="info-heading">Formula</p>
+                    <p class="info-content">{{ data['formula'] }}</p>
+                </div>
+                <div class="result-box">
+                    <p class="info-heading">Uses</p>
+                    <p class="info-content">{{ data['uses'] }}</p>
+                </div>
+                <div class="result-box">
+                    <p class="info-heading">Dosage</p>
+                    <p class="info-content">{{ data['dosage'] }}</p>
+                </div>
+            </div>
+            <div class="result-additional">
+                <div class="result-box">
+                    <p class="info-heading">Alternatives</p>
+                    <p class="info-content">{{ data['alternatives'] }}</p>
+                </div>
+                <div class="result-box">
+                    <p class="info-heading">SideEffects:</p>
+                    <p class="info-content">{{ data['effects'] }}</p>
+                </div>
+                <div class="result-box">
+                    <p class="info-heading">Warnings</p>
+                    <p class="info-content">{{ data['warnings'] }}</p>
+                </div>
+            </div>
+            {% else %}
+            <p>No information found for the given medication.</p>
+            {% endif %}
+        </div>
+        <a href="/" class="back-button">Back to Search</a>
+    </div>
+</body>
+</html>

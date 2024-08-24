@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMA - Emergency Medication Assistance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="static/EMA.png">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='EMA.png') }}" alt="Logo" class="logo">
+            <h1 class="main-heading">Emergency Medication Assistance</h1>
+        </div>
+
+        <div id="search-container">
+            <form action="/search" method="post">
+                <input id="search-bar" type="text" name="query" placeholder="Enter medication name or formula" required>
+                <button id="search-button" type="submit">Search</button>
+            </form>
+        </div>
+
+        <div class="disclaimer">
+            <p><strong>Disclaimer:</strong></p>
+            <p>
+                The information provided by the Emergency Medication Assistance (EMA) website is for general informational purposes only.
+                While we strive to ensure that the information is accurate and up-to-date, it is not intended to replace professional medical advice, diagnosis, or treatment.
+                Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition or treatment.
+            </p>
+            <p>
+                Never disregard professional medical advice or delay in seeking it because of something you have read on this website.
+                If you think you may have a medical emergency, call your doctor or emergency services immediately.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 by Katta Koushik Reddy</p>
+        <div class="social-links">
+            <a href="mailto:kattakoushikreddy27@gmail.com">Email</a> |
+            <a href="https://github.com/kattakoushikreddy27" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/kattakoushikreddy" target="_blank">LinkedIn</a> |
+            <a href="https://www.instagram.com/koushikreddy27" target="_blank">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
